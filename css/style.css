@@ -1,0 +1,485 @@
+/* ************************************************************************************ */
+/* 初期設定 */
+/* ************************************************************************************ */
+/* margin, paddingタグのリセット */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* liタグのリセット */
+li {
+    list-style: none;
+}
+/* buttonタグのborderリセット */
+button {
+    border: none;
+}
+/* aタグのリセット */
+a {
+     text-decoration: none;
+}
+
+/* ************************************************************************************ */
+/* 共通 */
+/* ************************************************************************************ */
+.btn {
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 2rem;
+}
+
+.mouse-hover {
+    transition:opacity 0.3s;
+}
+
+.mouse-hover:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* ************************************************************************************ */
+/* ページトップレイアウト */
+/* ************************************************************************************ */
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ****************************************** */
+/* ページトップ共通 */
+/* ****************************************** */
+.top-wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+.btn-white {
+    background-color: white;
+}
+
+/* ****************************************** */
+/* ヘッダー部分 */
+/* ****************************************** */
+/* ヘッダーメイン */
+header {
+    width: 100%;
+    height: 40px;
+    margin:0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* z-index: 1; */
+}
+/* ロゴの設定 */
+h1 {
+    width: 190px;
+    margin-left: 40px;
+}
+
+.logo img {
+    width: 100%;
+    display: block;
+}
+
+/* ナビゲーションの設定 */
+.nav-list {
+    display: flex;
+    margin-right: 40px;
+}
+
+/* ヘッダーナビゲーションのレイアウト設定 */
+.nav-content {
+    text-align: center;
+    margin-left: 40px; 
+    font-family:system-ui;   
+}
+.nav-content:first-child{
+    margin-left: 0;
+}
+.nav-content a{
+    display: block;
+}
+
+/* ヘッダーナビゲーションのフォントスタイル */
+.nav-main {
+    font-weight: bold;
+    font-size: 14px;
+    color:black;
+}
+.nav-sub {
+    font-size: 11px;
+    color:black;
+}
+
+/* ヘッダーのボタン */
+.btn-header {
+    background-color: #f79314;
+    border-radius: 20px;
+    padding: 0 20px;
+    line-height: 40px;
+}
+.btn-header a{
+    color: white;
+    font-size: 12px;
+}
+
+
+/* ハンバーガーメニュー用 */
+.nav-hidden{
+    display: none;
+}
+
+.hamburger-open {
+    display: none;
+}
+
+/* ****************************************** */
+/* ページっトップレイアウト */
+/* ****************************************** */
+/* ページトップ背景設定 */
+.top-primary {
+    background-image: url(../img/top-hero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* トップ主要コンテンツ */
+.primary-content {
+    display: inline-block;
+    margin-bottom: 80px;
+}
+
+.primary-content h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #2e2e2e;
+}
+
+/* ３つの画像 */
+.img-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0;
+    margin-bottom: 20px;
+}
+.img-flex li:nth-child(2) {
+    width: 40%;
+    text-align: center;
+}
+.img-flex img {
+    width: 100%;
+}
+
+
+/* 主要コンテンツボタン */
+.btn-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-orange {
+    width: 290px;
+    background-color: #f79314;
+}
+.btn-orange a{
+    color: white;
+}
+
+.btn-flex .btn-white {
+    border:1px solid #cecece;
+    width: 190px;
+}
+
+.btn-flex .btn-white a{
+    color: black;
+}
+
+/* ****************************************** */
+/* 注意書き */
+/* ****************************************** */
+.note {
+    font-size: 12px;
+    color: #cecece;
+}
+
+/* ****************************************** */
+/* ページトップ下部 */
+/* ****************************************** */
+/* レイアウト */
+.top-secondary {
+    background-color: #f79314;
+}
+
+.flex {
+    height: 200px;
+    display: table;
+}
+
+/* サブ部コンテンツ */
+.secondary-content {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    color: white;
+}
+
+.secondary-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.secondary-title .large {
+    font-size: 50px;
+}
+
+.secondary-text {
+    text-align: justify;
+    line-height: 28px;
+    font-size: 14px;
+
+}
+
+/* サブ部ボタン */
+.secondary-btn {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+.secondary-btn .btn {
+    width: 250px;
+    display: inline-block;
+}
+.btn-en {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #f79314;
+}
+
+.btn-ja {
+    font-size: 12px;
+    line-height: 16px;
+    color: #f79314;
+}
+
+/* ************************************************************************************ */
+/* 画面幅が1065px以下の場合 */
+/* ************************************************************************************ */
+@media screen and (max-width:1065px) {
+    
+    .hamburger-open {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 26px;
+        margin-right: 10px;
+        align-items: center;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .hamburger-open span{
+        display: block;
+        height: 4px;
+        width: 30px;
+        background: #333;
+        position: absolute;
+        transition:0.5s;
+    }
+    .hamburger-open span.first-bar {
+        bottom:22px;
+    }
+    .hamburger-open span.second-bar {
+        top:11px
+    }
+    .hamburger-open span.third-bar {
+        top: 22px;
+    }
+
+    #nav-input:checked ~ .hamburger-open span.first-bar {
+        transform:translate(0, 11px) rotate(45deg);
+    }
+    #nav-input:checked ~ .hamburger-open span.second-bar {
+        transform: translate(40px);
+        opacity: 0;
+    }
+    #nav-input:checked ~ .hamburger-open span.third-bar {
+        transform:translate(0, -11px) rotate(-45deg);
+    }
+
+    .top-primary {
+        background-position: center +60px;
+    }
+
+    header {
+        width:100%;
+        display: block;
+    }
+
+    h1 {
+        margin-left:40px;
+    }
+    
+    nav {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left:100%;
+        transition: 0.5s;
+        opacity: 0;
+        animation: fadeout 0.5s forwards;
+    }
+    
+    #nav-input:checked ~ nav {
+        animation: fadein 0.5s forwards;
+    }
+    @keyframes fadein {
+        0%{
+            opacity: 1;
+            left:100%;
+        }        
+        100%{
+            opacity: 1;
+            left: 0;
+        }
+    }
+    @keyframes fadeout {      
+        100%{
+            opacity: 0;
+            left: 100%;
+        }
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-content {
+        margin:0 auto;
+        padding-top: 40px;
+    }
+    .nav-content:first-child{
+        margin:0 auto; 
+    }
+    .nav-main {
+        color: white;
+        font-size: 18px;
+        font-weight: normal;
+        letter-spacing: 5px;
+        padding-bottom: 5px;
+    }
+
+    .nav-sub {
+        color: #f79314;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .btn-header {
+        background-color: #f79314;
+        height: 4rem;
+        width: 250px;
+        border-radius: 2rem;
+        padding: 0 2rem;
+        line-height: 4rem;
+    }
+    .btn-header a{
+        color: white;
+        font-size: 16px;
+    }
+
+    .flex {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondary-content {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .secondary-btn {
+        text-align: center;
+    }
+
+}
+
+/* ************************************************************************************ */
+/* 画面幅が752px以下の場合 */
+/* ************************************************************************************ */
+@media screen and (max-width:752px) {
+    .top-wrapper {
+        padding: 20px 20px;
+    }
+    
+    .top-primary {
+        background-image: url(../img/top-hero-sp.jpeg);
+        width: 100%;
+        background-size: contain;
+    }
+    .primary-content {
+        display: block;
+        margin-top: 350px;
+        width: 100%;
+    }
+
+
+    .primary-content h2 {
+        font-size: 24px;
+    }
+
+    /* 両サイドの画像サイズ設定 */
+    .img-flex li:nth-child(odd) {
+        width: 30%;
+        text-align: center;
+    }
+
+
+    /* 主要コンテンツボタン */
+    .btn-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-orange {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-flex .btn-white {
+        width: 100%;
+    }
+
+
+    .secondary-content {
+        margin-bottom: 40px;
+    }
+
+    .secondary-title {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .secondary-title .large {
+        font-size: 30px;
+    }
+
+    .secondary-btn {
+        margin-bottom: 40px;
+    }
+}
